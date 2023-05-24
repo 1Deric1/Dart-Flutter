@@ -1,0 +1,49 @@
+import 'dart:io';
+
+//function (n1, n2) =>n1+n2;
+
+int soma(int a,int b)=>a+b;
+int sub(int a,int b)=>a-b;
+int mul(int a,int b)=>a*b;
+double div(double a,double b)=>a/b;
+
+void main() {
+var op = "";
+  while(op!="s"){
+    print("Digite a opção [+]soma [-]sub [*]mul [/]div ");
+    op = stdin.readLineSync();
+    switch(op){
+      case "+":
+        int a = 10;
+        int b = 10;
+        soma(a,b);
+        break;
+      case "-":
+        int a = 10;
+        int b = 8;
+        sub(a,b);
+        break;
+      case "*":
+        print("Digite o valor a: ");
+        int a = 8;
+        print("Digite o valor b: ");
+        int b = 2;
+        mul(a,b);
+        break;
+      case "/":
+        print("Digite o valor a: ");
+        double a = 10;
+        print("Digite o valor b: ");
+        double b = 2;
+        div(a,b);
+        break;
+      case "s":
+        break;
+      default:
+        print("Nao foi encontrado o tipo");
+        print("tente novamente");
+        
+      }
+    }
+    
+  }
